@@ -6,9 +6,6 @@
 // Make sure to dft both channels.
 // Since the measure thing takes some seconds to find the optimal algorithm
 //   it's better to run it on a seperate thread so as to have no delays.
-// TODO: dont forget to make your own implementation of fft
-//  You really dont know whats happening.
-// Make your own fft implementation it doesnt matter if its that slow.
 
 #define MAX_SAMPLES 1024
 

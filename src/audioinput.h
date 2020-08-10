@@ -6,15 +6,15 @@
 class AudioInput
 {
 public:
-	AudioInput();
-	~AudioInput();
+    AudioInput();
+    ~AudioInput();
 
-	static void Create();
-	static void Quit();
-	static float* GetInput(size_t num_samples);
+    static void Create();
+    static void Quit();
+    static float* GetInput(size_t num_samples);
 
 private:
-	static std::thread tHndl;
-	static AudioInput* s_Instance;
-	static float* s_Buffer;
+    static std::thread tHndl;
+    static AudioInput* s_Instance;
+    static float* s_Buffer;
 };

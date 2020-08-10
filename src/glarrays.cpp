@@ -90,12 +90,12 @@ void VertexArray::SetLayout(const std::initializer_list<BufferElement>& elements
 
 VertexBuffer::VertexBuffer()
 {
-	glGenBuffers(1, &m_Id);
+    glGenBuffers(1, &m_Id);
 }
 
 VertexBuffer::~VertexBuffer()
 {
-	glDeleteBuffers(1, &m_Id);
+    glDeleteBuffers(1, &m_Id);
 }
 
 void VertexBuffer::Bind() const
@@ -111,7 +111,7 @@ void VertexBuffer::UnBind() const
 void VertexBuffer::UploadData(const void* data, size_t size, unsigned int usage) const
 {
     glBindBuffer(GL_ARRAY_BUFFER, m_Id);
-	glBufferData(GL_ARRAY_BUFFER, size, data, usage);
+    glBufferData(GL_ARRAY_BUFFER, size, data, usage);
 }
 
 void VertexBuffer::UpdateData(long offset, const void* data, size_t size) const
